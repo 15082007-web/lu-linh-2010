@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Lu Linh | 20.10.2026</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;700;800&family=Quicksand:wght@400;500;700&display=swap');
+
+:root {
+    --pink: #ff77aa;
+    --rose: #d82d72;
+    --gold: #ffe5a3;
+    --cream: #fff7fa;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: var(--cream);
+    font-family: 'Quicksand', sans-serif;
+    background:
+        radial-gradient(ellipse at 15% 20%, #772052 0%, transparent 45%),
+        radial-gradient(ellipse at 85% 80%, #61245e 0%, transparent 45%),
+        linear-gradient(135deg, #17051f, #3b102f 55%, #16091f);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: .22;
+    background-image: radial-gradient(#fff 0.7px, transparent 0.7px);
+    background-size: 32px 32px;
+}
+
+#particles {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.particle {
+    position: absolute;
+    bottom: -40px;
+    animation: floatUp linear forwards;
+    filter: drop-shadow(0 0 8px #ff8cbd);
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0) rotate(0); opacity: 0; }
+    15% { opacity: .9; }
+    100% { transform: translateY(-115vh) rotate(360deg); opacity: 0; }
+}
+
+.page {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 16px;
+}
+
+.card {
+    width: min(100%, 760px);
+    position: relative;
+    text-align: center;
+    padding: clamp(28px, 6vw, 58px);
+    border: 1px solid rgba(255, 220, 235, .35);
+    border-radius: 32px;
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,.12),
+        rgba(255,255,255,.035)
+    );
+    backdrop-filter: blur(16px);
+    box-shadow: 0 25px 90px rgba(0,0,0,.3),
+                inset 0 0 35px rgba(255,160,200,.05);
+    animation: enter 1.2s ease both;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 9px;
+    border: 1px solid rgba(255, 220, 170, .25);
+    border-radius: 25px;
+    pointer-events: none;
+}
+
+@keyframes enter {
+    from { opacity: 0; transform: translateY(35px) scale(.96); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.rose {
+    font-size: 66px;
+    display: inline-block;
+    filter: drop-shadow(0 0 20px #ff6ca5);
+    animation: sway 3s ease-in-out infinite;
+}
+
+@keyframes sway {
+    0%, 100% { transform: rotate(-8deg) scale(1); }
+    50% { transform: rotate(8deg) scale(1.08); }
+}
+
+.eyebrow {
+    margin-top: 14px;
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+h1 {
+    margin: 22px 0 8px;
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(48px, 10vw, 84px);
+    font-weight: 400;
+    line-height: 1.2;
+    color: #ffd6e7;
+    text-shadow: 0 0 28px rgba(255, 91, 160, .5);
+}
+
+.date {
+    display: inline-block;
+    margin: 10px 0 24px;
+    padding: 9px 22px;
+    border: 1px solid rgba(255, 229, 163, .6);
+    border-radius: 50px;
+    color: var(--gold);
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+.name {
+    margin: 6px 0 15px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: clamp(25px, 5.6vw, 43px);
+    line-height: 1.35;
+    background: linear-gradient(90deg, #fff0ba, #ff91c4, #fff0ba);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 4s linear infinite;
+}
+
+@keyframes shimmer {
+    to { background-position: 200% center; }
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 22px 0;
+    color: var(--gold);
+}
+
+.divider::before, .divider::after {
+    content: "";
+    width: 65px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold));
+}
+
+.divider::after {
+    transform: rotate(180deg);
+}
+
+.message {
+    max-width: 530px;
+    min-height: 100px;
+    margin: auto;
+    font-size: 16px;
+    line-height: 2;
+    color: #fff0f6;
+}
+
+.signature {
+    margin-top: 18px;
+    color: #ffc6df;
+    font-family: 'Great Vibes', cursive;
+    font-size: 34px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+button {
+    border: 1px solid rgba(255,255,255,.35);
+    border-radius: 50px;
+    padding: 12px 20px;
+    color: white;
+    font: 700 13px 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #e7478a, #a62970);
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(220, 45, 115, .22);
+    transition: transform .25s, box-shadow .25s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 100, 170, .4);
+}
+
+button:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 4px;
+}
+
+.secondary {
+    background: rgba(255,255,255,.08);
+}
+
+.footer {
+    margin-top: 27px;
+    color: rgba(255, 230, 241, .65);
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+#surprise {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 18px;
+    background: rgba(255, 180, 215, .1);
+    border: 1px solid rgba(255, 200, 225, .25);
+    animation: enter .6s ease both;
+}
+
+#surprise.show { display: block; }
+
+@media (max-width: 480px) {
+    .card { padding: 34px 20px; }
+    .eyebrow { letter-spacing: 2px; }
+    .message { font-size: 14px; }
+    .buttons { flex-direction: column; }
+    button { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
+</style>
+</head>
+
+<body>
+<div id="particles" aria-hidden="true"></div>
+
+<main class="page">
+    <section class="card">
+        <div class="rose" aria-hidden="true">🌹</div>
+
+        <p class="eyebrow">A LITTLE GIFT MADE WITH LOVE</p>
+
+        <h1>Happy Women's Day</h1>
+
+        <div class="date">20 · 10 · 2026</div>
+
+        <div class="name">
+            CHÚC BÉ LU LINH<br>
+            20/10 LUÔN XINH ĐẸP
+        </div>
+
+        <div class="divider">♡ ✧ ♡</div>
+
+        <p class="message" id="message">
+            Chúc bé Lu Linh có một ngày 20/10 thật ngọt ngào,
+            luôn xinh đẹp, vui vẻ và hạnh phúc.
+            Mong rằng mỗi ngày của bé đều ngập tràn tiếng cười,
+            may mắn và những điều tuyệt vời nhất. 💗
+        </p>
+
+        <div class="signature">For you, Lu Linh ♡</div>
+
+        <div class="buttons">
+            <button onclick="openLetter()">💌 Mở thư bí mật</button>
+            <button onclick="celebrate()">✨ Gửi ngàn yêu thương</button>
+            <button class="secondary" onclick="toggleMusic()" id="musicBtn">
+                ♫ Bật giai điệu
+            </button>
+        </div>
+
+        <div id="surprise">
+            <p style="font-size: 25px; margin-bottom: 12px;">💖 🌷 💖</p>
+            <p>
+                Gửi bé Lu Linh,<br><br>
+                Chúc bé luôn giữ nụ cười thật tươi,
+                luôn tự tin, rạng rỡ và được yêu thương
+                theo cách tuyệt vời nhất.
+                <br><br>
+                <strong>20/10 vui vẻ nhé, bé Lu Linh! 🌹</strong>
+            </p>
+        </div>
+
+        <p class="footer">
+            MADE ESPECIALLY FOR LU LINH · 20.10.2026
+        </p>
+    </section>
+</main>
+
+<script>
+const particleBox = document.getElementById("particles");
+const symbols = ["🌸", "💗", "✨", "🌷", "♡", "🌹"];
+let particleTimer;
+
+function createParticle() {
+    if (particleBox.childElementCount > 45) return;
+
+    const p = document.createElement("span");
+    p.className = "particle";
+    p.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+    p.style.left = Math.random() * 100 + "vw";
+    p.style.fontSize = (12 + Math.random() * 17) + "px";
+
+    const duration = 5 + Math.random() * 5;
+    p.style.animationDuration = duration + "s";
+
+    particleBox.appendChild(p);
+    setTimeout(() => p.remove(), duration * 1000);
+}
+
+particleTimer = setInterval(createParticle, 350);
+
+function openLetter() {
+    const letter = document.getElementById("surprise");
+    letter.classList.toggle("show");
+
+    if (letter.classList.contains("show")) {
+        letter.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        celebrate();
+    }
+}
+
+function celebrate() {
+    for (let i = 0; i < 24; i++) {
+        setTimeout(createParticle, i * 60);
+    }
+}
+
+// Giai dieu dien tu nhe, khong can file nhac ngoai
+let audio = null;
+let musicTimer = null;
+let playing = false;
+let note = 0;
+
+const melody = [
+    523.25, 659.25, 783.99, 659.25,
+    587.33, 698.46, 880.00, 698.46,
+    523.25, 659.25, 783.99, 1046.50
+];
+
+function playNote(freq) {
+    if (!audio) return;
+
+    const osc = audio.createOscillator();
+    const gain = audio.createGain();
+
+    osc.type = "sine";
+    osc.frequency.value = freq;
+
+    gain.gain.setValueAtTime(0.0001, audio.currentTime);
+    gain.gain.exponentialRampToValueAtTime(
+        0.045, audio.currentTime + 0.04
+    );
+    gain.gain.exponentialRampToValueAtTime(
+        0.0001, audio.currentTime + 0.38
+    );
+
+    osc.connect(gain);
+    gain.connect(audio.destination);
+    osc.start();
+    osc.stop(audio.currentTime + 0.4);
+}
+
+async function toggleMusic() {
+    const btn = document.getElementById("musicBtn");
+
+    if (playing) {
+        clearInterval(musicTimer);
+        playing = false;
+        btn.textContent = "♫ Bật giai điệu";
+        return;
+    }
+
+    try {
+        const Audio = window.AudioContext || window.webkitAudioContext;
+        if (!Audio) {
+            alert("Trình duyệt không hỗ trợ âm thanh.");
+            return;
+        }
+
+        if (!audio) audio = new Audio();
+        await audio.resume();
+
+        playing = true;
+        btn.textContent = "♫ Tắt giai điệu";
+        playNote(melody[note]);
+
+        musicTimer = setInterval(() => {
+            if (!playing) return;
+            note = (note + 1) % melody.length;
+            playNote(melody[note]);
+        }, 450);
+    } catch (error) {
+        playing = false;
+        btn.textContent = "♫ Bật giai điệu";
+        alert("Không thể bật âm thanh trên trình duyệt.");
+    }
+}
+</script>
+</body>
+</html>
